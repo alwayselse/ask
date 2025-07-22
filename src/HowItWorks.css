@@ -1,0 +1,83 @@
+
+#how-it-works {
+  padding: 3rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  font-family: 'Inter', sans-serif;
+}
+
+#how-it-works-subtext {
+  color: #ccc;
+  font-size: 1.5rem;
+  text-align:center;
+  max-width: 600px;
+  margin-bottom: 2rem;
+}
+
+
+.howitworks-steps {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  width: 100%;
+  max-width: 1100px;
+  justify-content: center;
+  align-items: stretch;
+}
+
+@media (max-width: 768px) {
+  .howitworks-steps {
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+  }
+}
+
+.howitworks-step-card {
+  background: #1a1a1a;
+  border-radius: 1rem;
+  box-shadow: 0 4px 24px 0 rgba(0,0,0,0.18);
+  padding: 2rem 1.5rem;
+  flex: 1 1 0;
+  min-width: 220px;
+  max-width: 340px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+.howitworks-step-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(26,26,26,0.82);
+  z-index: 0;
+}
+.howitworks-step-title,
+.howitworks-step-desc {
+  position: relative;
+  z-index: 1;
+}
+.howitworks-step-card:hover, .howitworks-step-card:focus {
+  transform: scale(1.05);
+  box-shadow: 0 8px 32px 0 rgba(0,0,0,0.28), 0 0 0 2px #3b82f6;
+}
+
+.howitworks-step-title {
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+.howitworks-step-desc {
+  color: #b3b3b3;
+  font-size: 1rem;
+  text-align: center;
+}

@@ -1,0 +1,35 @@
+.post-hero-stars {
+  pointer-events: none;
+  position: absolute;
+  top: 100vh;
+  left: 0;
+  width: 100vw;
+  height: 200vh; /* covers the rest of the page after hero */
+  z-index: 0;
+  overflow: hidden;
+}
+
+.post-hero-star {
+  position: absolute;
+  width: 1.5px;
+  height: 1.5px;
+  background: #e0e0e0;
+  border-radius: 50%;
+  box-shadow: 0 0 2px 1px #e0e0e055;
+  opacity: 0.35;
+  animation: post-twinkle 4s infinite ease-in-out, post-star-move 38s linear infinite;
+}
+
+@keyframes post-twinkle {
+  0%, 100% { opacity: 0.25; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.13); }
+}
+
+@keyframes post-star-move {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(80px);
+  }
+}

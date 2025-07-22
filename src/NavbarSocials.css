@@ -1,0 +1,16 @@
+.footer-socials a {
+  color: #a3a3a3;
+  transition: color 0.2s;
+  display: flex;
+  align-items: center;
+}
+
+.footer-socials a:hover {
+  color: #fff;
+}
+
+.footer-socials svg {
+  width: 1.3em;
+  height: 1.3em;
+  display: block;
+}
